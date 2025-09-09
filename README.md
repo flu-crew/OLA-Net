@@ -2,13 +2,13 @@
 
 OLA-Net estimates the reticulation number - the number of reticulation events required to explain the topological differences across a set of phylogenetic trees. The trees can be multifurcating - in this case, OLA-Net will resolve them to minimize the topological discrepancy and the reticulation number between the trees. OLA-Net was inspired by the Ordered Leaf Attachment (OLA) vector encoding of phylogenetic trees (see [Richman et al., 2025](https://arxiv.org/abs/2503.10169)) and a strong connection between OLA vectors and acyclic agreement forests.
 
-As OLA-vectors depend on a fixed-ordering of leaves/taxa, OLA-Net provides two options to estimate the reticulation number depending on the type of a dataset you have:
+As OLA-vectors depend on a fixed-ordering of leaves/taxa, OLA-Net provides two options to estimate the reticulation number depending on the type of dataset you have:
 
 1. If you are analyzing recombination among RNA viruses, you can specify a metadata file with a collection date for each virus, and OLA-Net will infer the ordering of the leaves from the dates (see [testfiles/generated_dates.csv](testfiles/generated_dates.csv) for an example). We recommend this option for RNA viruses as it will produce fastest and likely most accurate results.
 
 2. If you are analyzing macroevolutionary events, OLA-Net will try many random permutations of taxa to estimate the reticulation number. Below, we show an example of how this can be used.
 
-OLA-Net requires Python 3 and it depends on TreeSwift (`pip install treeswift`) to run.
+OLA-Net requires Python 3, and it depends on TreeSwift (`pip install treeswift`) to run.
 
 The tool has built-in options to help you reduce the tree estimation error to achieve better results: it allows you to drop low-support branches and/or branches that are too short.
 
@@ -19,7 +19,7 @@ We use a dataset from [Bernardini et al., Mol Phylogenet Evol., 2023](https://ww
 The following 2 multifurcated trees have an optimal reticulation number of **4** as was shown by Bernardini et al.
 
 <center>
-<img src="test_files/Lamprologini_trees.png">
+<img src="testfiles/Lamprologini_trees.png">
 </center>
 
 These trees in Newick format are located in [testfiles/Lamprologini.tre](testfiles/Lamprologini.tre). We then run OLA-Net as follows:
