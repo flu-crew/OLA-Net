@@ -1,6 +1,6 @@
 # OLA-Net #
 
-OLA-Net estimates the reticulation number - the number of reticulation events required to explain the topological differences across a set of phylogenetic trees. The trees can be multifurcating - in this case, OLA-Net will resolve them to minimize the topological discrepancy and the reticulation number between the trees. OLA-Net was inspired by the Ordered Leaf Attachment (OLA) vector encoding of phylogenetic trees (see [Richman et al., 2025](https://arxiv.org/abs/2503.10169)) and a strong connection between OLA vectors and acyclic agreement forests.
+OLA-Net estimates the reticulation number - the number of reticulation events required to explain the topological differences across a set of phylogenetic trees. The trees can be multifurcating - in this case, OLA-Net will resolve them to minimize the topological discrepancy and the reticulation number between the trees. OLA-Net was inspired by the Ordered Leaf Attachment (OLA) vector encoding of phylogenetic trees (see [Richman et al., 2025](https://arxiv.org/abs/2503.10169)) and a (soon-to-be-published) connection between OLA vectors and acyclic agreement forests.
 
 As OLA-vectors depend on a fixed-ordering of leaves/taxa, OLA-Net provides two options to estimate the reticulation number depending on the type of dataset you have:
 
